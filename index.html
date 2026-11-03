@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J. Inspired | Premium Fashion</title>
+    <meta
+      name="description"
+      content="Luxury clothing e-commerce storefront inspired by J. featuring men, women, kids and accessories."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand-wrap">
+          <div class="brand-mark">J.</div>
+          <div class="brand-text">
+            <span class="brand-title">J. Inspired</span>
+            <small>atelier</small>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#shop">Shop</a>
+          <a href="#collections">Collections</a>
+          <a href="#checkout">Checkout</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <label class="search-box" aria-label="Search products">
+            <span>⌕</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search collections..."
+              aria-label="Search products"
+            />
+          </label>
+
+          <button id="wishlistToggle" class="icon-button" type="button" aria-label="Wishlist">
+            <span class="icon">♡</span>
+            <span id="wishlistCount" class="count-badge">0</span>
+          </button>
+
+          <button id="cartToggle" class="icon-button cart-button" type="button" aria-label="Open cart">
+            <span class="icon">🛒</span>
+            <span id="cartCount" class="count-badge">0</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section id="home" class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Premium cultural elegance</p>
+            <h1>Luxury fashion for every celebration.</h1>
+            <p class="hero-text">
+              Discover refined formalwear, festive silhouettes, and everyday essentials
+              crafted for confidence, comfort, and timeless style.
+            </p>
+            <div class="hero-buttons">
+              <a href="#shop" class="btn btn-primary">Shop Now</a>
+              <a href="#collections" class="btn btn-secondary">Explore Looks</a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <strong>1200+</strong>
+                <span>Style lovers</span>
+              </div>
+              <div>
+                <strong>50%</strong>
+                <span>Flash discount</span>
+              </div>
+              <div>
+                <strong>24/7</strong>
+                <span>Order support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="floating-card card-one">
+              <span class="mini-label">New Arrival</span>
+              <strong>Emerald Heritage</strong>
+            </div>
+            <div class="floating-card card-two">
+              <span class="mini-label">Best Seller</span>
+              <strong>Luxury Kurta</strong>
+            </div>
+            <div class="hero-image-frame">
+              <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+                alt="Model wearing luxury clothing"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="collections" class="collections">
+          <div class="section-heading">
+            <p class="eyebrow">Curated categories</p>
+            <h2>Shop by collection</h2>
+          </div>
+
+          <div class="category-grid">
+            <article class="category-card men">
+              <div class="category-bg"></div>
+              <div class="category-content">
+                <p>Men</p>
+                <h3>Formal & casual essentials</h3>
+              </div>
+            </article>
+
+            <article class="category-card women">
+              <div class="category-bg"></div>
+              <div class="category-content">
+                <p>Women</p>
+                <h3>Graceful festive silhouettes</h3>
+              </div>
+            </article>
+
+            <article class="category-card kids">
+              <div class="category-bg"></div>
+              <div class="category-content">
+                <p>Kids</p>
+                <h3>Comfort and celebration</h3>
+              </div>
+            </article>
+
+            <article class="category-card accessories">
+              <div class="category-bg"></div>
+              <div class="category-content">
+                <p>Accessories</p>
+                <h3>Polished finishing touches</h3>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="shop" class="products-section">
+          <div class="section-heading row">
+            <div>
+              <p class="eyebrow">Featured collection</p>
+              <h2>Signature styles</h2>
+            </div>
+
+            <div class="filter-group" aria-label="Product category filters">
+              <button class="filter-button active" type="button" data-filter="all">All</button>
+              <button class="filter-button" type="button" data-filter="men">Men</button>
+              <button class="filter-button" type="button" data-filter="women">Women</button>
+              <button class="filter-button" type="button" data-filter="kids">Kids</button>
+              <button class="filter-button" type="button" data-filter="accessories">Accessories</button>
+            </div>
+          </div>
+
+          <div id="productsGrid" class="products-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="utility-layout">
+          <div class="wishlist-panel">
+            <div class="section-heading compact">
+              <p class="eyebrow">Saved Items</p>
+              <h3>Your wishlist</h3>
+            </div>
+            <div id="wishlistGrid" class="wishlist-grid"></div>
+          </div>
+
+          <aside id="cartPanel" class="cart-panel">
+            <div class="section-heading compact">
+              <p class="eyebrow">Your cart</p>
+              <h3>Order summary</h3>
+            </div>
+
+            <div id="cartItems" class="cart-items"></div>
+
+            <div class="totals">
+              <div><span>Subtotal</span><strong id="subtotalValue">PKR 0</strong></div>
+              <div><span>Discount</span><strong id="discountValue">-PKR 0</strong></div>
+              <div class="final"><span>Total</span><strong id="totalValue">PKR 0</strong></div>
+            </div>
+
+            <div class="cart-actions">
+              <button type="button" class="btn btn-secondary block" id="continueShopping">Continue Shopping</button>
+              <a href="#checkout" class="btn btn-primary block">Proceed to Checkout</a>
+            </div>
+          </aside>
+        </section>
+
+        <section id="checkout" class="checkout">
+          <div class="section-heading">
+            <p class="eyebrow">Checkout</p>
+            <h2>Complete your order</h2>
+          </div>
+
+          <form id="checkoutForm" class="checkout-form">
+            <div class="input-row">
+              <label>
+                <span>Customer name</span>
+                <input type="text" id="customerName" name="name" placeholder="Your full name" required />
+              </label>
+
+              <label>
+                <span>Phone number</span>
+                <input type="tel" id="customerPhone" name="phone" placeholder="+92 300 0000000" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Delivery address</span>
+              <textarea
+                id="customerAddress"
+                name="address"
+                rows="4"
+                placeholder="Enter your full delivery address"
+                required
+              ></textarea>
+            </label>
+
+            <div class="checkout-summary">
+              <div>
+                <span>Order total</span>
+                <strong id="checkoutTotal">PKR 0</strong>
+              </div>
+            </div>
+
+            <div class="checkout-actions">
+              <button type="submit" class="btn btn-primary">Place order on WhatsApp</button>
+              <button type="button" class="btn btn-secondary" id="clearCartBtn">Clear cart</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="contact" class="contact-section">
+          <div class="contact-card">
+            <div class="section-heading compact">
+              <p class="eyebrow">Contact us</p>
+              <h2>We’re here to help</h2>
+            </div>
+
+            <div class="contact-grid">
+              <a href="https://wa.me/923001234567" target="_blank" rel="noreferrer">
+                <span>WhatsApp</span>
+                <strong>+92 300 1234567</strong>
+              </a>
+              <a href="tel:+923001234567">
+                <span>Phone</span>
+                <strong>+92 300 1234567</strong>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <span>Instagram</span>
+                <strong>@j.inspired</strong>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <span>Facebook</span>
+                <strong>J Inspired Fashion</strong>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <span class="brand-mark small">J.</span>
+          <span>Premium fashion, inspired by elegance.</span>
+        </div>
+        <p>Sample pricing mode • 50% off every product</p>
+      </footer>
+    </div>
+
+    <div id="productModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button type="button" class="modal-close" id="modalClose" aria-label="Close product details">×</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
